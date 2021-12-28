@@ -1,0 +1,10 @@
+{
+  "name": "{{.ProjectName}}",
+  "outputfilename": "{{.BinaryName}}",
+  "frontend:install": "mint install",
+  "frontend:build": "mint build",
+  "author": {
+    "name": "{{.AuthorName}}",
+    "email": "{{.AuthorEmail}}"
+  }
+}
