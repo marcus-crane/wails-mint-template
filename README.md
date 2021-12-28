@@ -1,4 +1,6 @@
-# README
+# wails-mint-template
+
+> 🏗 UNDER CONSTRUCTION
 
 ## About
 

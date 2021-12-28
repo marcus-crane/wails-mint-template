@@ -1,7 +1,7 @@
 {
-  "name": "Long name",
+  "name": "wails-mint-template",
   "shortname": "wails-mint-template",
-  "author": "",
-  "description": "Description of the template",
-  "helpurl": "URL for help with the template, eg homepage"
+  "author": "Marucs Crane <marcus@utf9k.net>",
+  "description": "A template that integrates Mint with Wails",
+  "helpurl": "https://github.com/marcus-crane/wails-mint-template"
 }
