@@ -42,13 +42,32 @@ component Input {
     }
   }
 
-  state name : String = "User"
+  state greeting : String = "Please enter your name below 👇"
+
+  fun greet : Promise(Never, Void) {
+    case (input) {
+      Maybe::Just(element) =>
+        sequence {
+          Dom.focusWhenVisible(element)
+          name = Dom.getValue(element)
+          greeting = `window.go.main.App.Greet(name)`
+          next { greeting = greeting }
+        } catch String => error {
+          sequence {
+            Debug.log(error)
+            next { }
+          }
+        }
+
+      Maybe::Nothing => next {}
+    }
+  }
 
   fun render : Html {
     <div data-wails-no-drag="true">
-      <div::result>"Please enter your name below 👇"</div>
-      <input::input as input><{ name }></input>
-      <button::button >"Greet"</button>
+      <div::result><{ greeting }></div>
+      <input::input as input></input>
+      <button::button onClick={greet}>"Greet"</button>
     </div>
   }
 }
