@@ -2,8 +2,7 @@
   "name": "{{.ProjectName}}",
   "application": {
     "head": "assets/head.html",
-    "title": "{{.ProjectName}}",
-    "icon": "assets/favicon.png"
+    "title": "{{.ProjectName}}"
   },
   "external": {
     "stylesheets": [
